@@ -1,1 +1,3 @@
-alert(1);
+const name = 'ダミーユーザー';
+
+console.log(name);
