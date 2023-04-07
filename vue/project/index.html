@@ -22,6 +22,11 @@
     <h1>v-modelの動作確認</h1>
     <input @input="message = $event.target.value">
     <p>入力内容 : {{ message }}</p>
+    <h1>computed property</h1>
+    <input v-model="text1">
+    <p>text1 : {{ capitalizedText1 }}</p>
+    <input v-model="text2">
+    <p>text2 : {{ capitalizedText2() }}</p>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
