@@ -19,6 +19,9 @@
     <h1>ディレクティブ</h1>
     <a :href="url">{{ url }}</a>
     <button @click="clickButton">ボタン</button>
+    <h1>v-modelの動作確認</h1>
+    <input @input="message = $event.target.value">
+    <p>入力内容 : {{ message }}</p>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

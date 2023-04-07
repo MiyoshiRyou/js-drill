@@ -5,6 +5,7 @@ new Vue({
       title: 'titleデータ',
       body: 'bodyです',
       url: 'https://google.com',
+      message: '',
     }
   },
   methods: {
@@ -13,6 +14,9 @@ new Vue({
     },
     clickButton() {
       alert('クリック！！');
+    },
+    inputValue(event) {
+      this.message = event.target.value;
     }
   }
 })
