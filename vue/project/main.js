@@ -10,6 +10,7 @@ new Vue({
       text2: '',
       text3: '',
       text4: '',
+      count: 1,
     }
   },
   computed: {
@@ -39,7 +40,10 @@ new Vue({
       }
 
       return this.text2.charAt(0).toUpperCase() + this.text2.slice(1);
-    }
+    },
+    increment() {
+      this.count++;
+    },
   },
   watch: {
     text3(newValue, oldValue) {

@@ -32,6 +32,19 @@
     <p>text3 : {{ text3 }}</p>
     <input v-model="text4">
     <p>text4 : {{ text4 }}</p>
+    <h2>v-if, v-else-if, v-elseの動作確認</h2>
+    <p>現在の値 : {{ count }}</p>
+    <button @click="increment">インクリメント</button>
+    <hr>
+
+    <p v-if="count % 15 === 0">15の倍数</p>
+    <p v-else-if="count % 5 === 0">5の倍数</p>
+    <p v-else-if="count % 3 === 0">3の倍数</p>
+    <p v-else>3の倍数でも5の倍数でも無い</p>
+
+    <hr>
+    <h2>v-showの動作確認</h2>
+    <p v-show="count % 2 === 0">偶数時に表示</p>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
