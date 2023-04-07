@@ -8,6 +8,8 @@ new Vue({
       message: '',
       text1: '',
       text2: '',
+      text3: '',
+      text4: '',
     }
   },
   computed: {
@@ -37,6 +39,12 @@ new Vue({
       }
 
       return this.text2.charAt(0).toUpperCase() + this.text2.slice(1);
+    }
+  },
+  watch: {
+    text3(newValue, oldValue) {
+      console.log('newValue : ', newValue);
+      console.log('oldValue : ', oldValue);
     }
   }
 })
