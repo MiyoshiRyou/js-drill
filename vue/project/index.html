@@ -41,7 +41,6 @@
     <p v-else-if="count % 5 === 0">5の倍数</p>
     <p v-else-if="count % 3 === 0">3の倍数</p>
     <p v-else>3の倍数でも5の倍数でも無い</p>
-
     <hr>
     <h2>v-showの動作確認</h2>
     <p v-show="count % 2 === 0">偶数時に表示</p>
@@ -59,7 +58,20 @@
         {{ key }} : {{ value }}
       </li>
     </ul>
+
+    <h2>#app内</h2>
+    <button-counter></button-counter>
+    <hr>
+    <button-counter></button-counter>
+    <hr>
+    <button-counter></button-counter>
+    <hr>
+    <p>カウント : {{ count }}</p>
+    <button @click="count++">インクリメント</button>
+    <button @click="destroy">インスタンス削除</button>
   </div>
+  <h2>#app外</h2>
+  <button-counter></button-counter>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="main.js"></script>
