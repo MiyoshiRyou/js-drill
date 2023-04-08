@@ -45,6 +45,20 @@
     <hr>
     <h2>v-showの動作確認</h2>
     <p v-show="count % 2 === 0">偶数時に表示</p>
+
+    <h2>配列に対するv-for</h2>
+    <ul>
+      <li v-for="(tweet, index) in tweets" :key="index">
+        {{ tweet.user }} : {{ tweet.text }}
+      </li>
+    </ul>
+
+    <h2>オブジェクトに対するv-for</h2>
+    <ul>
+      <li v-for="(value, key) in tweet" :key="key">
+        {{ key }} : {{ value }}
+      </li>
+    </ul>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

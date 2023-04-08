@@ -11,6 +11,25 @@ new Vue({
       text3: '',
       text4: '',
       count: 1,
+      tweets: [
+        {
+          user: 'suzuki',
+          text: 'good morning',
+        },
+        {
+          user: 'takahashi',
+          text: 'good afternoon',
+        },
+        {
+          user: 'tanaka',
+          text: 'good evening',
+        },
+      ],
+      tweet: {
+        user: 'Bob',
+        text: 'Hello World',
+        date: new Date().toLocaleString(),
+      },
     }
   },
   computed: {
