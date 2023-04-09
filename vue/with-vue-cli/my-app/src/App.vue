@@ -12,6 +12,11 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  data() {
+    return {
+      count: 0
+    }
   }
 }
 </script>
