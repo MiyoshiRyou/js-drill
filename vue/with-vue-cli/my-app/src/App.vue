@@ -12,16 +12,25 @@
     <Counter
       buttonTitle="ボタン3"
     />
+    <Button title="ボタン1" />
+    <Button title="ボタン2" @onClick="hello" />
   </div>
 </template>
 
 <script>
 import Counter from './components/Counter';
+import Button from './components/Button';
 
 export default {
   name: 'Fuga',
   components: {
-    Counter
+    Counter,
+    Button
+  },
+  methods: {
+    hello(data1, data2, event) {
+      console.log('Hello!!!', data1, data2, event);
+    }
   }
 }
 
