@@ -12,8 +12,7 @@
     <Counter
       buttonTitle="ボタン3"
     />
-    <Button title="ボタン1" />
-    <Button title="ボタン2" @onClick="hello" />
+    <Button title="ボタン2" :onClick="hello" />
   </div>
 </template>
 
@@ -28,8 +27,8 @@ export default {
     Button
   },
   methods: {
-    hello(data1, data2, event) {
-      console.log('Hello!!!', data1, data2, event);
+    hello(event, data1) {
+      console.log('Hello!!!', event, data1);
     }
   }
 }

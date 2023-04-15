@@ -1,5 +1,5 @@
 <template>
-  <div class="button" @click="$emit('onClick', 'abc@@@', title, $event)">
+  <div class="button" @click="onClick($event, 'fugafuga')">
     {{ title }}
   </div>
 </template>
@@ -9,6 +9,10 @@ export default {
   props: {
     title: {
       type: String,
+      required: true
+    },
+    onClick: {
+      type: Function,
       required: true
     }
   }
